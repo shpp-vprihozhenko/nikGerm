@@ -1,0 +1,14 @@
+<p>
+  list works!
+</p>
+<ul *ngFor="let el of arEl">
+  <li> 
+    <app-item [el]=el></app-item>
+  </li>
+</ul>
+
+<ul *ngFor="let item of arToDoItems">
+    <li> 
+      {{ item.name }}
+    </li>
+  </ul>

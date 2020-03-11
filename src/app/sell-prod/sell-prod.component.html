@@ -1,0 +1,19 @@
+<h3>Занесение информации об отгрузке товара клиенту</h3>
+
+<form class='form' (ngSubmit)='onSubmit()'>
+    <div class="form-group">
+        <label for="choosenBuyer">Клиент:</label>
+        <select class="form-control" id="choosenBuyer" [(ngModel)]="choosenBuyer" required name="choosenBuyer">
+          <option *ngFor="let buyer of buyers"> {{ buyer }} </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="quantity">Количество наборов:</label>
+        <input type="number" name="quantity" [(ngModel)]="quantity" min="1" max="999" style="margin-left: 1em">
+    </div>
+    <div class="form-group">
+        <label for="date">Дата:</label>
+        <input type="date" name="date" [(ngModel)]="date" style="margin-left: 1em">
+    </div>
+    <input type="submit" value="OK" class="btn btn-success">
+</form>

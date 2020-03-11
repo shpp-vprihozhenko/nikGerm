@@ -1,0 +1,17 @@
+<h3>Состояние заказов</h3>
+<ng-container>
+    <table>
+        <tr>
+            <th style='width: 20em'>Клиент</th>
+            <th>Дата отправки</th>
+            <th>Сумма заказа</th>
+            <th>Остаток долга</th>
+        </tr>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.client }}</td>
+          <td>{{ order.dateOfShipping }}</td>
+          <td>{{ order.orderSum }}</td>
+          <td>{{ order.orderBalance }}</td>
+        </tr>
+      </table>
+</ng-container>

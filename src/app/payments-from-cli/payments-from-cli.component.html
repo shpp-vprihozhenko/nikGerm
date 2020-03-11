@@ -1,0 +1,19 @@
+<h3>Занесение информации об оплате от клиента</h3>
+
+<form class='form' (ngSubmit)='onSubmit()'>
+    <div class="form-group">
+        <label for="choosenClient">Клиент:</label>
+        <select class="form-control" id="choosenClient" [(ngModel)]="choosenClient" required name="choosenBuyer">
+          <option *ngFor="let client of clients"> {{ client }} </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="sum">Сумма:</label>
+        <input type="number" name="sum" [(ngModel)]="sum" min="1" max="99999" style="margin-left: 1em">
+    </div>
+    <div class="form-group">
+        <label for="date">Дата:</label>
+        <input type="date" name="date" [(ngModel)]="date" style="margin-left: 1em">
+    </div>
+    <input type="submit" value="OK" class="btn btn-success">
+</form>
